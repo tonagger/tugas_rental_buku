@@ -17,7 +17,32 @@ class buku{
 			pengarang = n_pengarang;;
 			genre = n_genre;			
 		}
+		
+	float biaya_sewa(float harga_buku, int jml_hari){
+		int nilai_sewa;
+		if (harga_buku >= 10000 && harga_buku <= 100000){
+			nilai_sewa = 1500;
+		} else if (harga_buku >= 100000 && harga_buku <= 500000){
+			nilai_sewa = 5000;
+		} else if (harga_buku >= 500000){
+			nilai_sewa = 10000;
+		}
+		
+	float biaya_denda(float harga_buku, int jml_hari){
+		int nilai_denda;
+		if (harga_buku >= 10000 && harga_buku <= 100000){
+			nilai_denda = 500;
+		} else if (harga_buku >= 100000 && harga_buku <= 500000){
+			nilai_denda = 1000;
+		} else if (harga_buku >= 500000){
+			nilai_denda = 2000;
+		}
+		return nilai_denda * jml_hari;
+	}
+		
+	}
 };
+
 
 
 
